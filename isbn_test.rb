@@ -34,9 +34,12 @@ class TestToCheckForDashOrSpace <Minitest::Test
 end
 class TestTheSumOfIsbn <Minitest::Test
 	def test_sum_of_an_isbn
-		assert_equal([7, 8, 6, 4, 15, 54, 28, 56, 54],multiply_the_element_by_position_and_sum(["7","4","2","1","3","9","4","7","6","1"]))
+		assert_equal([7, 8, 6, 4, 15, 54, 28, 56, 54],multiply_the_element_by_position_and_return_array_of_numbers(["7","4","2","1","3","9","4","7","6","1"]))
 	end
 	def test_adding_numbers_in_array
-		assert_equal([232], adding_array([7, 8, 6, 4, 15, 54, 28, 56, 54]))
+		assert_equal(232, adding_array([7, 8, 6, 4, 15, 54, 28, 56, 54]))
+	end
+	def test_modulos_of_sum
+		assert_equal(1, modulos_of_sum(232))
 	end
 end 
