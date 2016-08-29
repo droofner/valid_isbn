@@ -12,18 +12,23 @@ def string_remove_space_or_dash(string)
 	remove = [" ","-"]
 
 	remove.each do |symbol|
-		string.delete! symbol if string.include? symbol
+		string.delete! symbol 
 	end
 	string
-
-
-	#if string.include? " " && "-"
-	#	string.delete (" ") && ("-")
-	#elsif string.include? " "
-	#	  string.delete " "	
-	#elsif string.include?"-"
-	#	string.delete "-"
-	#else 
-	#	string
-	#end
 end
+def multiply_the_element_by_position_and_sum(array_of_strings)
+	empty_array = []
+
+	array_of_strings.each_with_index do |value, index|
+		if index < 9
+		 return_value = value.to_i * (index + 1)
+		 empty_array.push(return_value)
+		end
+	end
+	empty_array
+end
+def adding_array(array)
+	my_array = []
+	my_array.push(array.inject(:+))
+end
+

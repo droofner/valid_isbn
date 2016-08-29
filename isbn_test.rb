@@ -32,3 +32,11 @@ class TestToCheckForDashOrSpace <Minitest::Test
 		assert_equal("0123456789",string_remove_space_or_dash(" -01-2 3  4 -- -56789"))
 	end
 end
+class TestTheSumOfIsbn <Minitest::Test
+	def test_sum_of_an_isbn
+		assert_equal([7, 8, 6, 4, 15, 54, 28, 56, 54],multiply_the_element_by_position_and_sum(["7","4","2","1","3","9","4","7","6","1"]))
+	end
+	def test_adding_numbers_in_array
+		assert_equal([232], adding_array([7, 8, 6, 4, 15, 54, 28, 56, 54]))
+	end
+end 
