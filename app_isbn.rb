@@ -32,5 +32,13 @@ def adding_array(array)
 end
 
 def modulos_of_sum(sum)
-	sum % 11
+	 checksum = sum % 11
+	if checksum == 10
+		"X"
+	else
+		checksum
+	end
+
+		
+
 end

@@ -42,4 +42,7 @@ class TestTheSumOfIsbn <Minitest::Test
 	def test_modulos_of_sum
 		assert_equal(1, modulos_of_sum(232))
 	end
+	def test_modulos_of_sum_equals_x
+		assert_equal("X",modulos_of_sum(21))
+	end
 end 
