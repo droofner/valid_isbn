@@ -1,5 +1,5 @@
 def valid_isbn_length?(num)
-	if num.length == 10
+	if num.length == 10 || num.length == 13
 		true
 	else
 		false
@@ -32,11 +32,11 @@ def adding_array(array)
 end
 
 def modulos_of_sum(sum)
-	 checksum = sum % 11
-	if checksum == 10
+	 check_sum = sum % 11
+	if check_sum == 10
 		"X"
 	else
-		checksum
+		check_sum
 	end
 
 		
