@@ -8,11 +8,7 @@ class TestValidIsbn < Minitest::Test
 	def test_valid_10_digit_isbn_string_returns_true()
 		assert_equal(true,valid_isbn_length?("0471958697"))
 	end
-	def test_invalid_10_digit_isbn
-		skip("no") 
-		assert_equal(false, valid_isbn_length?("0471958699"))	
-	end	
-end
+	
 class TestConvertStringToArray <Minitest::Test
 	def test_empty_string_returns_empty_array
 		assert_equal([],string_to_array(""))
@@ -45,6 +41,7 @@ class TestIsbn10MathFunction <Minitest::Test
         assert_equal(false, valid_10_digit_isbn?(["1","4","7","1","9","5","8","6","9","7"]))
         assert_equal(true, valid_10_digit_isbn?(["8","7","7","1","9","5","8","6","9","10"]))
     end
+    
 end
 class TestNumbersInMyArrayOnlyFunction <Minitest::Test
 def test_for_non_numeric_characters_in_my_array?
@@ -66,4 +63,5 @@ class TestMainFunction <Minitest::Test
 	def test_10_and_13_digit_string 
 		assert_equal(true, valid_isbn_10_or_13("9780156027328"))
 	end
+end
 end

@@ -2,7 +2,7 @@ require "sinatra"
 require_relative "app_isbn2.rb"
 
 get "/" do
-erb :isbn_app_input
+erb :isbn_app_input, :locals => {:message => ""}
 end
 post "/isbn" do
 	isbn = params[:valid]
@@ -12,7 +12,7 @@ post "/isbn" do
 	else numbers == false
 		numbers = "invalid"
 	end
-	"ISBN #{numbers}"
+	erb :isbn_app_input, :locals => {:message =>"Your ISBN  #{isbn}, is #{numbers}"}
 
 
 	
